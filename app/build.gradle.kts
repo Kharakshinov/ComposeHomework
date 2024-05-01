@@ -7,6 +7,14 @@ android {
     namespace = "ru.project.composehomework"
     compileSdk = 34
 
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.11"
+    }
+
     defaultConfig {
         applicationId = "ru.project.composehomework"
         minSdk = 26
@@ -43,4 +51,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Compose
+    implementation ("androidx.compose.ui:ui:1.6.6")
+    implementation ("androidx.compose.material:material:1.6.6")
+    implementation ("androidx.activity:activity-compose:1.9.0")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.6.2")
 }
